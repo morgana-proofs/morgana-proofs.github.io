@@ -571,19 +571,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../chapter-6-attacks/SUMMARY.md">
-            
-                <span>
-            
-                    
-                    Attacks and Model
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -639,7 +626,19 @@
 <p>MACI, minimal anti-collusion infrastructure is a voting system, suggested here: <a href="https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413" target="_blank">https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413</a> by Vitalik Buterin, and implemented here: <a href="https://github.com/privacy-scaling-explorations/maci" target="_blank">https://github.com/privacy-scaling-explorations/maci</a>.</p>
 <p>We are aiming to improve it by swapping a singular server for an MPC in such a way that user privacy could be broken only by collusion of parties in MPC.</p>
 <p>Other desired properties - non-coercibility and auditability should still hold.</p>
-<p>What attack model are we using is described <a href="chapter-6-attacks/SUMMARY.md">here]</a></p>
+<p>We mainly consider some simmilar settings:</p>
+<ol>
+<li>Third party is trying to force user into voting as they please.</li>
+<li>Third party is trying to waste user&apos;s voice.</li>
+<li>Third party is trying to buy user&apos;s voice.</li>
+<li>User themselves is trying to sell their voice.</li>
+</ol>
+<p>We assume that a third party can force user into some sort of a MPC protocol.</p>
+<p>Some examples of possible attacks:</p>
+<ol>
+<li>Third pary forses user to engage in a 2-party protocol in which user will sign a transaction with unknown content with their private key.</li>
+<li>If third party can prove that there are at least <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span> transactions from the user published on a blockchain, they can force user to provide third party with contents of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span> different transactions, then use <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span><span class="mord">.</span></span></span></span> and check if there are such blocks on blockchain. </li>
+</ol>
 
                                 
                                 </section>
@@ -683,7 +682,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Problem statement","level":"1.2.1","depth":2,"next":{"title":"Design considerations","level":"1.2.2","depth":2,"path":"chapter-1-overview/design-considerations.md","ref":"chapter-1-overview/design-considerations.md","articles":[]},"previous":{"title":"Overview","level":"1.2","depth":1,"path":"chapter-1-overview/SUMMARY.md","ref":"chapter-1-overview/SUMMARY.md","articles":[{"title":"Problem statement","level":"1.2.1","depth":2,"path":"chapter-1-overview/problem-statement.md","ref":"chapter-1-overview/problem-statement.md","articles":[]},{"title":"Design considerations","level":"1.2.2","depth":2,"path":"chapter-1-overview/design-considerations.md","ref":"chapter-1-overview/design-considerations.md","articles":[]},{"title":"Protocol overview","level":"1.2.3","depth":2,"path":"chapter-1-overview/protocol-overview.md","ref":"chapter-1-overview/protocol-overview.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex-plus"],"pluginsConfig":{"katex-plus":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-1-overview/problem-statement.md","mtime":"2023-01-19T18:33:20.972Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2023-01-19T18:33:32.563Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Problem statement","level":"1.2.1","depth":2,"next":{"title":"Design considerations","level":"1.2.2","depth":2,"path":"chapter-1-overview/design-considerations.md","ref":"chapter-1-overview/design-considerations.md","articles":[]},"previous":{"title":"Overview","level":"1.2","depth":1,"path":"chapter-1-overview/SUMMARY.md","ref":"chapter-1-overview/SUMMARY.md","articles":[{"title":"Problem statement","level":"1.2.1","depth":2,"path":"chapter-1-overview/problem-statement.md","ref":"chapter-1-overview/problem-statement.md","articles":[]},{"title":"Design considerations","level":"1.2.2","depth":2,"path":"chapter-1-overview/design-considerations.md","ref":"chapter-1-overview/design-considerations.md","articles":[]},{"title":"Protocol overview","level":"1.2.3","depth":2,"path":"chapter-1-overview/protocol-overview.md","ref":"chapter-1-overview/protocol-overview.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex-plus"],"pluginsConfig":{"katex-plus":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter-1-overview/problem-statement.md","mtime":"2023-01-09T16:14:33.762Z","type":"markdown"},"gitbook":{"version":"4.0.4","time":"2023-01-09T16:14:45.176Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
